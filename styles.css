@@ -1,0 +1,129 @@
+.oswald-uniquifier {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.botones-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+button {
+  margin: 30px;
+  width: 200px;
+  height: 100px;
+  font-size: large;
+  background-color: rgb(35, 209, 104);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: lightblue;
+}
+
+@media only screen and (max-width: 600px) {
+  .botones-container {
+    flex-direction: column;
+  }
+
+  button {
+    width: 180px;
+    height: 80px;
+    font-size: medium;
+  }
+}
+
+/* Responsive de Pantallas tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .botones-container {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  button {
+    width: 220px;
+    height: 90px;
+    font-size: large;
+  }
+}
+
+/* Estilos de barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+  color: lightblue;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+}
